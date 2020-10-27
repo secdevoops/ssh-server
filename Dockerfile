@@ -7,14 +7,16 @@ RUN yum install -y openssh-server
 
 
 RUN mkdir -p /var/run/sshd \
-  && mkdir /root/.ssh \
-  && chmod 700 /root/.ssh 
+  && mkdir /root/.ssh
+   
 
 RUN ssh-keygen -A
 
 RUN rm -f /run/nologin
 
 COPY my_key.pub /root/.ssh/authorized_keys
+
+RUN chmod -R 700 /root/.ssh
 
 EXPOSE 22
 
