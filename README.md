@@ -4,6 +4,15 @@ Docker container for running OpenSSH server on a Centos.
 
 ## Steps
 
+### Clone the project
+```
+git clone https://github.com/secdevoops/ssh-server.git
+```
+and then go to the project directory
+```
+cd ssh-server
+```
+
 ### Build the image
 
 ```
